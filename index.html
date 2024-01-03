@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan your Trip with PlanMyTrip</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md">
+        <img src="./images/logo.png" alt="Learn Networking" id="logo">
+        <a class="navbar-brand" href="#">
+            <h2 id="brandheading">Plan<span id="brandName">MyTrip</span></h2>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Book</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                    <a class="nav-link dropdown-toggle" href="#">Packages</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">United States</a>
+                      <a class="dropdown-item" href="#">India</a>
+                      <a class="dropdown-item" href="#">France</a>
+                      <a class="dropdown-item" href="#">Germany</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Gallery</a>
+              </li> 
+            <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+            </li>    
+          </ul>
+        </div>  
+        <div class="buttons">
+            <a href="#loginmodal" data-toggle="modal">
+                <button type="button" class="btn btn-primary" >Sign in</button>
+            </a>
+            <a href="#regmodal" data-toggle="modal">
+                <button type="button" class="btn btn-primary">Register</button>
+            </a>
+        </div>
+    </nav>
+    <div class="container-fluid" id="home">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- First task -->
+                <img src="./images/background-image1.png" alt="background" class="background-image image-fluid">
+            </div>
+            <div class="col-md-6" id="leftDiv">
+                <!-- Second task -->
+                <form id="form1">
+                    <div class="form-group">
+                        <label for="form1">From -</label>
+                        <select class="form-select">
+                            <option selected>Select Source</option>
+                            <option>Tokyo</option>
+                            <option>New York</option>
+                            <option>Paris</option>
+                            <option>Cairo</option>
+                            <option>Tokyo</option>
+                            <option>Bangalore</option>
+                            <option>Pune</option>
+                            <option>Canada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="form1">Where to -</label>
+                        <select class="form-select">
+                            <option selected>Select Destination</option>
+                            <option>Tokyo</option>
+                            <option>New York</option>
+                            <option>Paris</option>
+                            <option>Cairo</option>
+                            <option>Tokyo</option>
+                            <option>Bangalore</option>
+                            <option>Pune</option>
+                            <option>Canada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="form1">Number of travellers - </label>
+                        <select class="form-select">
+                            <option selected>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="form1">Start Date - </label>
+                        <input type="date" name="startdate" id="startdate">
+                    </div>
+                    <div class="form-group">
+                        <label for="form1">End Date - </label>
+                        <input type="date" name="enddate" id="enddate">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Comment:</label>
+                        <textarea class="form-control" rows="2" id="comment" minlength="50" maxlength="500"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-lg">Book</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<div class="container" id="product-section">
+<h1 class="text-center">Special offers for you</h1>
+<!-- Start of first product row -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/Bengaluru.png" alt="Agra">
+            <h3 class="text-center">Bengaluru</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Bengaluru's Palace and Lal Bagh Botanical Garden are among the city’s popular tourist attractions.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$300 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/tajmahal.png" alt="Agra">
+            <h3 class="text-center">Agra</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Agra is a city on the banks of the Yamuna river in the Indian state of Uttar Pradesh.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$150 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/indore.png" alt="Agra" class="city-img">
+            <h3 class="text-center">Indore</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Indore is the largest and most populous city in the Indian state of Madhya Pradesh..</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$250 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+</div>
+<!-- End of first row -->
+
+<!-- Start of second product row -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/pune.png" alt="Agra" class="city-img">
+            <h3 class="text-center">Pune</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Pune exemplifies an indigenous Marathi culture, ethos and theatres are given due prominence.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$280 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/cairo.png" alt="Agra" class="city-img">
+            <h3 class="text-center">Cairo</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Cairo is famous for the famous Giza Pyramids that holds one of the Seven Wonders of the World.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$500 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/tokyo.png" alt="Agra" class="city-img">
+            <h3 class="text-center">Tokyo</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Tokyo Disneyland, the Kingdom of Dreams and Magic, consists of seven themed lands.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$650 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+</div>
+<!-- End of second row -->
+
+<!-- Start of third product row -->
+<div class="row">
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/canada.png" alt="Agra" class="city-img">
+            <h3 class="text-center">Canada</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Known for its beautiful scenery, Canada is home to majestic mountain ranges, sparkling blue lakes.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$1000 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/newyork.png" alt="New York" class="city-img">
+            <h3 class="text-center">New York</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>This city is perfect for college graduates, as the city's businesses offer world-class internships in industries.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$750 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <img src="./images/paris.png" alt="Paris" class="city-img">
+            <h3 class="text-center">Paris</h3>
+            <div class="star text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+                    <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+            </div>
+            <p>Paris is famous for its dedication to the arts—literary, musical, visual, or otherwise.</p>
+            <button type="submit" id="book-now-btn">Book now</button>
+            <h5>$650 <span><img src="./images/add.png" alt="Add button" id="add-btn"></span></h5>
+        </div>
+    </div>
+</div>
+<!-- End of third row -->
+</div>
+</div>
+</div>
+
+<!-- Start of slick slider -->
+<div style="background-color: #f2f2f2;">
+    <div class="container" style="margin-top: 50px; border-radius: 10px; padding-bottom: 20px;">
+        <h1 class="text-center" style="padding-top: 40px; padding-bottom: 20px;">We offer</h1>
+        <div class="row serviceSlider">
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/sliderImages/slide1.png" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/sliderImages/slide2.png" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/sliderImages/slide3.png" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/sliderImages/slide4.jpg" alt="Image" class="image-fluid">
+                    <div class="imgtext-bottomright"><h4>24*7 Customer Support</h4></div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/sliderImages/slide5.jpg" alt="Image" class="image-fluid">
+                    <div class="imgtext-bottomright"><h4>Free Delicious Breakfast on Hotel Bookings</h4></div>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/sliderImages/slide6.jpg" alt="Image" class="image-fluid">
+                    <div class="imgtext-leftcentered"><h4>Affordable Domestic and International flights</h4></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- End of slick slider -->
+
+
+<!-- Start of gallery slick slider -->
+<div style="background-color: #f2f2f2; padding-bottom: 20px;">
+    <div class="container">
+        <h1 class="text-center" style="margin-top: 50px; margin-bottom: 20px; padding-top: 15px;">Glimpses from users</h1>
+        <div class="row gallerySlider">
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery1.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery2.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery3.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery4.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery5.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery6.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery7.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <div class="card">
+                    <img src="./images/gallery8.jpg" alt="Image" class="image-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of gallery slick slider -->
+
+<!-- Start About us -->
+<div class="container">
+    <h1 class="text-center" style="margin-top: 50px;">About us</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <img src="./images/brandlogo.png" alt="logo" class="img-fluid">
+        </div>
+        <div class="col-md-6" style="padding-top: 80px;">
+            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
+            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
+            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
+            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
+        </div>
+    </div>
+</div>
+<!-- End About us -->
+
+
+<!-- Start footer -->
+    <div class="container-fluid footer">
+        <div class="row">
+            <div class="col-md-3">
+                <h4 style="margin-left: 20px;">Address:</h4>
+                <p>A1/17, Circular Road</p>
+                <p>Near Bhagat Singh Status, Abohar</p>
+                <p>India, Punjab - 152116</p>
+            </div>
+
+            <div class="col-md-3">
+                <h4 style="margin-left: 30px;">Our Services</h4>
+                <ul>
+                    <li><a href="#">Holiday Packages</a></li>
+                    <li><a href="#">Family Packages</a></li>
+                    <li><a href="#">Hotel</a></li>
+                    <li><a href="#">Domestic Flights</a></li>
+                    <li><a href="#">International Flights</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3">
+                <h4 style="margin-left: 30px;">Useful Links</h4>
+                <ul>
+                    <li><a href="#">Book now</a></li>
+                    <li><a href="#">Packages</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+                
+            <div class="col-md-3">
+                <h4>Connect us at</h4>
+                <ul id="socialicons">
+                    <li><i class="bi bi-instagram"></i></li>
+                    <li><i class="bi bi-linkedin"></i></li>
+                    <li><i class="bi bi-whatsapp"></i></li>
+                </ul>
+            </div>
+        </div>
+        <h6 class="text-center" style="margin-top: 15px;">All rights reserved. </h6>
+        <h6 class="text-center">&copy; 2024 Planmytrip.</h6>
+        
+    </div>
+<!-- End Footer -->
+
+<!-- Start of login modal -->
+
+<div class="modal" id="loginmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h4>Sign in</h4></div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        Email id <input type="email" class="form-control" placeholder="Enter your email" id="login-email" required>
+                        <p id="login-emailtxt"></p>
+                    </div>
+                    <div class="form-group">
+                        Password <input type="password" class="form-control" placeholder="Enter your password" id="login-passwd" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success">Login</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p>
+                    Don't have an account? <a href="#regmodal" data-dismiss="modal" data-toggle="modal">Register</a>
+                </p>
+                <button class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of login modal -->
+
+<!-- Start of Register modal -->
+<div class="modal" id="regmodal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header"><h4>Register</h4></div>
+            <div class="modal-body">
+                <form id="regform">
+                    <div class="form-group name">
+                        <label for="regform">First name</label><br>
+                        <input type="text" class="form-control" placeholder="First name" required id="fname">
+                    </div>
+                    <div class="form-group name">
+                        <label for="regform">Last name</label><br>
+                        <input type="text" class="form-control" placeholder="Last name" required id="lname">
+                    </div>
+                    <div class="form-group">
+                        Email id <input type="email" class="form-control" placeholder="Enter your email" id="reg-email" required> 
+                    </div>
+                    <div class="form-group">
+                        Password <input type="password" class="form-control" placeholder="Enter new password" id="reg-passwd" required>
+                    </div>
+                    <div class="form-group">
+                        Confirm Password <input type="email" class="form-control" placeholder="Confirm new password" id="reg-connpasswd" required> 
+                    </div>
+                    <div class="form-group">
+                        Contact <input type="tel" class="form-control" placeholder="Phone Number" id="reg-contact" required> 
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p class="text-center">
+                    Already have an account? <a href="#loginmodal" data-toggle="modal" data-dismiss="modal">Sign in</a>
+                </p>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Register modal -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<!-- JQuery for Services slick slider -->
+<script>
+    $('.serviceSlider').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 1000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+</script>
+
+<!-- JQuery for Gallery slick slider -->
+
+<script>
+    $('.gallerySlider').slick({
+  centerMode: true,
+  centerPadding: '60px',
+  slidesToShow: 3,
+  autoplay: true,
+  autoplaySpeed: 1000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
+});
+</script>
+
+<!-- Validation -->
+<script>
+    $(document).ready(function() {
+        $("#login-passwd").keyup(function() {
+            if(checkLoginpasswd()) {
+                $("#login-passwd").css("border","5px solid green");
+            } else {
+                $("#login-passwd").css("border","5px red red");
+            }
+        })
+
+        $("#login-email").keyup(function() {
+            if(checkloginemail()) {
+                $("#login-email").css("border","5px solid green");
+            } else {
+                $("#login-email").css("border","5px solid red");
+            }
+        })
+
+        $("#reg-email").keyup(function() {
+            if(checkregemail()) {
+                $("#reg-email").css("border","5px solid green");
+            } else {
+                $("#reg-email").css("border","5px solid red");
+            }
+        })
+
+        $("#reg-passwd").keyup(function() {
+            if(checkregpasswd()) {
+                $("#reg-passwd").css("border","5px solid green");
+            } else {
+                $("#reg-passwd").css("border","5px solid red");
+            }
+        })
+
+        $("#reg-connpasswd").keyup(function() {
+            if(checkregconnpasswd()) {
+                $("#reg-connpasswd").css("border","5px solid green");
+            } else {
+                $("#reg-connpasswd").css("border","5px solid red");
+            }
+        })
+
+        $("#reg-contact").keyup(function() {
+            if(checkregcontact()) {
+                $("#reg-contact").css("border","5px solid green");
+            } else {
+                $("#reg-contact").css("border","5px solid red");
+            }
+        })
+    })
+
+    function checkloginemail() {
+        let loginemail = $("#login-email").val();
+        let emailexp = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+
+        if(emailexp.test(loginemail)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkLoginpasswd() {
+        let loginpasswd = $("#login-passwd").val();
+        let passwdexp = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/;
+
+        if(passwdexp.test(loginpasswd)) {
+            return true;
+        } else {
+            return false;
+        }    
+    }
+
+    function checkregemail() {
+        let regemail = $("#reg-email").val();
+        let regemailexp = /^([a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
+
+        if(regemailexp.test(regemail)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkregpasswd() {
+        let regpasswd = $("#reg-passwd").val();
+        let regpasswdexp = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/;
+
+        if(regpasswdexp.test(regpasswd)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkregconnpasswd() {
+        let regconnpasswd = $("#reg-connpasswd").val();
+        let regconnpasswdexp = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/;
+
+        if(regconnpasswdexp.test(regconnpasswd)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function checkregcontact() {
+        let regcontact = $("#reg-contact").val();
+        let regcontactexp = /^\d{10}$/;
+
+        if(regcontactexp.test(regcontact)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+<!-- Validation end -->
+
+<br><br><br><br>
+</body>
+</html>
