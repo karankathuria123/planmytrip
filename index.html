@@ -38,7 +38,7 @@
             </li>
             <li class="nav-item">
                 <div class="dropdown">
-                    <a class="nav-link dropdown-toggle" href="#">Packages</a>
+                    <a class="nav-link dropdown-toggle" href="#packagesSection">Packages</a>
                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                       <a class="dropdown-item" href="#">United States</a>
                       <a class="dropdown-item" href="#">India</a>
@@ -48,13 +48,13 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#serviceSection">Services</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Gallery</a>
               </li> 
             <li class="nav-item">
-                <a class="nav-link" href="#">About us</a>
+                <a class="nav-link" href="#aboutUsSection">About us</a>
             </li>    
           </ul>
         </div>  
@@ -119,17 +119,17 @@
                     </div>
                     <div class="form-group">
                         <label for="form1">Start Date - </label>
-                        <input type="date" name="startdate" id="startdate">
+                        <input type="date" name="startdate" id="startdate" required>
                     </div>
                     <div class="form-group">
                         <label for="form1">End Date - </label>
-                        <input type="date" name="enddate" id="enddate">
+                        <input type="date" name="enddate" id="enddate" required>
                     </div>
                     <div class="form-group">
                         <label for="comment">Comment:</label>
                         <textarea class="form-control" rows="2" id="comment" minlength="50" maxlength="500"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-success btn-lg">Book</button>
+                    <button type="submit" class="btn btn-success btn-lg" onclick="booknow()">Book</button>
                 </form>
             </div>
         </div>
@@ -392,7 +392,7 @@
 <!-- Start of slick slider -->
 <div style="background-color: #f2f2f2;">
     <div class="container" style="margin-top: 50px; border-radius: 10px; padding-bottom: 20px;">
-        <h1 class="text-center" style="padding-top: 40px; padding-bottom: 20px;">We offer</h1>
+        <h1 class="text-center" style="padding-top: 40px; padding-bottom: 20px;" id="serviceSection">We offer</h1>
         <div class="row serviceSlider">
             <div class="col-md-12">
                 <div class="card">
@@ -499,16 +499,20 @@
 
 <!-- Start About us -->
 <div class="container">
-    <h1 class="text-center" style="margin-top: 50px;">About us</h1>
+    <h1 class="text-center" style="margin-top: 50px;" id="aboutUsSection">About us</h1>
     <div class="row">
         <div class="col-md-6">
-            <img src="./images/brandlogo.png" alt="logo" class="img-fluid">
+            <img src="./images/brandlogo.png" alt="logo" class="img-fluid" style="margin-top: -40px;">
         </div>
         <div class="col-md-6" style="padding-top: 80px;">
+            <!-- <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
             <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
             <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
-            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
-            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p>
+            <p class="text-centers">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, deserunt repellendus natus aut voluptates inventore fuga quo numquam nisi quas repudiandae doloribus exercitationem laboriosam velit praesentium dolores aliquam, vitae modi?</p> -->
+            <p class="text-centers">Welcome to PlanMyTrip.com – Your Gateway to Unforgettable Journeys!</p>
+            <p class="text-centers">At PlanMyTrip.com, we believe that travel is not just about reaching a destination; it's about the experiences that shape the journey. Established with a passion for exploration and a commitment to delivering exceptional travel solutions, PlanMyTrip.com is your trusted companion in crafting extraordinary travel experiences.</p>
+            <h4 class="text-centers">Our Story:</h4>
+            <p class="text-centers">Founded in 2024, PlanMyTrip.com was born out of a shared love for travel and a desire to simplify the journey for fellow explorers. Over the years, we have evolved into a trusted platform, connecting travelers with unforgettable experiences around the globe.</p>
         </div>
     </div>
 </div>
@@ -721,7 +725,7 @@
             if(checkLoginpasswd()) {
                 $("#login-passwd").css("border","5px solid green");
             } else {
-                $("#login-passwd").css("border","5px red red");
+                $("#login-passwd").css("border","5px solid red");
             }
         })
 
@@ -834,6 +838,14 @@
 </script>
 <!-- Validation end -->
 
-<br><br><br><br>
+<!-- Book now button function -->
+
+<script>
+    function booknow() {
+        window.alert("Your itinerary has been bookeed!!")
+    }
+</script>
+
+<br>
 </body>
 </html>
